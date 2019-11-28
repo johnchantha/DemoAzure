@@ -1,0 +1,24 @@
+{
+	"name": "Trigger_2qs",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "CopyPipeline_ContactToAzure",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Hour",
+				"interval": 1,
+				"startTime": "2019-11-28T15:11:00Z",
+				"timeZone": "UTC"
+			}
+		}
+	}
+}

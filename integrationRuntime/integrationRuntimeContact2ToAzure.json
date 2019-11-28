@@ -1,0 +1,6 @@
+{
+	"name": "integrationRuntimeContact2ToAzure",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}

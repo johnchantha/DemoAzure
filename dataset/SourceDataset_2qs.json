@@ -1,0 +1,48 @@
+{
+	"name": "SourceDataset_2qs",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlServerLocalMachine",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "ID",
+				"type": "int",
+				"precision": 10,
+				"scale": 255
+			},
+			{
+				"name": "First",
+				"type": "nchar",
+				"precision": 255,
+				"scale": 255
+			},
+			{
+				"name": "Last",
+				"type": "nchar",
+				"precision": 255,
+				"scale": 255
+			},
+			{
+				"name": "DOB",
+				"type": "date",
+				"precision": 255,
+				"scale": 255
+			},
+			{
+				"name": "LastModified",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "contact"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

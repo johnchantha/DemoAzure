@@ -1,0 +1,107 @@
+{
+	"name": "CopyPipeline_ContactToAzure",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy_2qs",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "dbo.contact"
+					},
+					{
+						"name": "Destination",
+						"value": "dbo.contact"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "SqlServerSource"
+					},
+					"sink": {
+						"type": "AzureSqlSink"
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "ID",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "ID",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "First",
+									"type": "String"
+								},
+								"sink": {
+									"name": "First",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Last",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Last",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "DOB",
+									"type": "Date"
+								},
+								"sink": {
+									"name": "DOB",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "LastModified",
+									"type": "DateTime"
+								},
+								"sink": {
+									"name": "LastModified",
+									"type": "DateTime"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SourceDataset_2qs",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_2qs",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

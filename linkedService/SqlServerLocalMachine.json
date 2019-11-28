@@ -1,0 +1,17 @@
+{
+	"name": "SqlServerLocalMachine",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"description": "connect from your local machine",
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=False;data source=LAPTOP-ORHG9E0A;initial catalog=DBMonitor;user id=sqladmin",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI1MzE1YTA5Yy05YTg0LTQ4N2YtOTJlYy0xNjcyYWYzMTZkYzQiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "integrationRuntimeContact2ToAzure",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

@@ -1,0 +1,48 @@
+{
+	"name": "DestinationDataset_2qs",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabaseContact",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "ID",
+				"type": "int",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "First",
+				"type": "nchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "Last",
+				"type": "nchar",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "DOB",
+				"type": "date",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "LastModified",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "contact"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
