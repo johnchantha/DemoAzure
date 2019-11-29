@@ -1,0 +1,13 @@
+{
+	"name": "AzureDataLakeStoreMain",
+	"properties": {
+		"annotations": [],
+		"type": "AzureDataLakeStore",
+		"typeProperties": {
+			"dataLakeStoreUri": "https://contactdemodatalake.azuredatalakestore.net/webhdfs/v1",
+			"tenant": "d5fda674-a581-4318-8d2e-dcf1a2d5d463",
+			"subscriptionId": "42fcb4a1-6d89-4ecf-882f-9ddbfc8b75af",
+			"resourceGroupName": "Johnc_RS"
+		}
+	}
+}
